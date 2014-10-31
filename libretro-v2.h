@@ -1830,9 +1830,9 @@ void retro_deinit(void);
  * when the API is revised. */
 unsigned retro_api_version(void);
 
-/* Gets statically known system info. Pointers provided in *info 
- * must be statically allocated.
- * Can be called at any time, even before retro_init(). */
+/* Gets known system info. Pointers provided in *info
+ * must point to valid immutable data until retro_deinit() is called.
+ * Can be called at any time before retro_deinit(), even before retro_init(). */
 void retro_get_system_info(struct retro_system_info *info);
 
 /* Gets information about system audio/video timings and geometry.
