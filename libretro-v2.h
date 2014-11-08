@@ -398,9 +398,10 @@ struct retro_message
 
 
 #define RETRO_ENVIRONMENT_SHUTDOWN      7  /* N/A (NULL) --
-                                            * Requests the frontend to shutdown.
-                                            * Should only be used if game has a specific
-                                            * way to shutdown the game from a menu item or similar.
+                                            * Requests the frontend to shutdown the core.
+                                            * Should only be used if core has a specific
+                                            * way to shutdown from a menu item or similar,
+                                            * or in response to unrecoverable errors.
                                             */
 #define RETRO_ENVIRONMENT_SET_PERFORMANCE_LEVEL 8
                                            /* const unsigned * --
